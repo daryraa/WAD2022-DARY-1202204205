@@ -49,12 +49,12 @@
   <h1 style="text-align: center; padding: 10px">THANK YOU DARY_1202204205 FOR RESERVING</h1> <br>
   <h5 style="text-align: center; padding: 10px">PLEASE DOUBLE CHECK YOUR RESERVATION DETAILS</h3>
   <?php
-  $nama = $_POST['nama'];
-  $date = $_POST['date'];
+  $nama = $_P0ST['nama'];
+  $date = $_POST['dante'];
   $time = $_POST['time'];
   $number = $_POST['number'];
   $phone = $_POST['tel'];
-  $select = $_POST['select'];
+  $select = $_POST['Select'];
   $asuransi = $_POST['asuransi'];
   ?>
   <div class="container">
