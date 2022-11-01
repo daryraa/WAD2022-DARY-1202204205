@@ -111,9 +111,9 @@
                 <input type="tel" class="form-control" id="tel" name="tel"  value="">
             </div>
             <div class="checkbox">
-                <label><input type="checkbox" name="asuransi" value="Health Protocol" id ="heal" >Health Protocol/Rp 25.000</label><br>
-                <label><input type="checkbox" name="asuransi" value="Driver"id ="drive" >Driver/Rp 100.000</label><br>
-                <label><input type="checkbox" name="asuransi" value="Fuel Filled" id ="fuel">Fuel Filled/Rp 250.000</label>
+                <label><input type="checkbox" name="heal" value="Health Protocol" id ="heal" >Health Protocol/Rp 25.000</label><br>
+                <label><input type="checkbox" name="drive" value="Driver"id ="drive" >Driver/Rp 100.000</label><br>
+                <label><input type="checkbox" name="fuel" value="Fuel Filled" id ="fuel">Fuel Filled/Rp 250.000</label>
             </div>
             <br>
             <div class="d-grid gap-2">

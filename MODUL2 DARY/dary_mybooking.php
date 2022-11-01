@@ -1,3 +1,48 @@
+<?php
+  $nama = $_POST['nama'];
+  $date = $_POST['date'];
+  $time = $_POST['time'];
+  $number = $_POST['number'];
+  $phone = $_POST['tel'];
+  $select = $_POST['select'];
+  $carprice = 0;
+  $serviceprice = 0;
+  $total = 0;
+
+  if (!isset( $_POST["heal"])){
+    $_POST["heal"]=Null;
+  }else{
+    $serviceprice += 25000;
+  }
+  if (!isset( $_POST["drive"])){
+    $_POST["drive"]=Null;
+  }else{
+    $serviceprice += 100000;
+  }
+  if (!isset( $_POST["fuel"])){
+    $_POST["fuel"]=Null;
+  }else{
+    $serviceprice += 250000;
+  }
+  $ary = [
+    $_POST["heal"],
+    $_POST["drive"],
+    $_POST["fuel"]
+  ];
+  $arr=array_filter($ary);
+
+  if($_POST['select']=="Toyota Calya"){
+    $carprice=500000 * (int)$number;
+  } 
+  elseif($_POST['select']=="Toyota Raize"){
+    $carprice=400000 * (int)$number;
+  } 
+  elseif($_POST['select']=="Toyota Avanza"){
+    $carprice=600000 * (int)$number;
+  } 
+  $total+= $serviceprice + $carprice
+
+  ?>
 <!doctype html>
 <html lang="en">
 
@@ -10,10 +55,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-  li {
-    text-align: center;
-  }
-
   btn btn-primary {
     align-items: center;
   }
@@ -48,15 +89,8 @@
   </header>
   <h1 style="text-align: center; padding: 10px">THANK YOU DARY_1202204205 FOR RESERVING</h1> <br>
   <h5 style="text-align: center; padding: 10px">PLEASE DOUBLE CHECK YOUR RESERVATION DETAILS</h3>
-  <?php
-  $nama = $_P0ST['nama'];
-  $date = $_POST['dante'];
-  $time = $_POST['time'];
-  $number = $_POST['number'];
-  $phone = $_POST['tel'];
-  $select = $_POST['Select'];
-  $asuransi = $_POST['asuransi'];
-  ?>
+
+ 
   <div class="container">
     <table class="table">
       <thead>
@@ -79,7 +113,19 @@
           <td><?php echo date('Y-m-d', strtotime($date . ' +' . $number . 'days')) . " " . $time ?></td>
           <td><?php echo $phone ?></td>
           <td><?php echo $select ?></td>
-          <td><?php echo $asuransi ?></td>
+          <td>
+            <?php 
+          if($arr==Null) {
+            echo "no service";
+          
+          }else{
+            foreach($arr as $servis){
+              echo "<li>$servis</li>";
+            }
+
+          }
+          ?></td>
+          <td><?php echo "Rp".number_format($total) ?></td>
         </tr>
       </tbody>
     </table>
