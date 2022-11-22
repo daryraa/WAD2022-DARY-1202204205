@@ -38,20 +38,22 @@ $showroom = query("SELECT * FROM showroom_dary_table");
   <h1>My Show Room</h1>
   <p>List Show room - 1202204205</p>
 
-  <?php foreach ($showroom as $row) : ?>
+  
     <div class="row">
+    <?php foreach ($showroom as $row) : ?>
       <div class="col-sm-4">
         <div class="card" style="margin-bottom: 10%;">
           <img src="../images/<?= $row["foto_mobil"]; ?>" class="card-img-top"  width="150px" height="250px">
           <div class="card-body">
             <p class="card-text"><?= $row["deskripsi"]; ?></p>
-            <a href="Detail-Dary.php" class="btn btn-primary">Detail</a>
+            <a href="Detail-Dary.php?id=<?=$row["id_mobil"];?>" class="btn btn-primary">Detail</a>
             <a href="../config/delete.php?id_mobil=<?= $row["id_mobil"]; ?>" class="btn btn-danger">Delete</a>
           </div>
         </div>
       </div>
+      <?php endforeach; ?>
     </div>
-  <?php endforeach; ?>
+  
   
 
 </body>

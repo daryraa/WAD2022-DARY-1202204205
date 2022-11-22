@@ -2,8 +2,9 @@
 require "../config/connector.php";
 require "../config/edit.php";
 require "../config/show.php";
+$id = $_GET['id'];
 
-$showroom = query("SELECT * FROM showroom_dary_table")[0];
+$showroom = query("SELECT * FROM showroom_dary_table WHERE showroom_dary_table.id_mobil=$id")[0];
 
 
 if (isset($_POST["submit"])) {

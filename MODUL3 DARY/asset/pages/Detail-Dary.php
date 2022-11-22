@@ -1,9 +1,10 @@
 <?php
 require "../config/connector.php";
 require "../config/show.php";
+require "../config/edit.php";
+$id = $_GET['id'];
 
-
-$showroom = query("SELECT * FROM showroom_dary_table")[0];
+$showroom = query("SELECT * FROM showroom_dary_table WHERE id_mobil=$id")[0];
 
 ?>
 
@@ -80,7 +81,7 @@ $showroom = query("SELECT * FROM showroom_dary_table")[0];
                 <br>
                 <br>
                 <a class="btn btn-danger" href="ListCar-Dary.php" role="button">Cancel</a>
-                <a class="btn btn-primary" href="Edit-Dary.php?<?= $showroom["id_mobil"] ?>" role="button">Edit</a>
+                <a class="btn btn-primary" href="Edit-Dary.php?id=<?=$showroom["id_mobil"];?>" role="button">Edit</a>
 
         </div>
 
