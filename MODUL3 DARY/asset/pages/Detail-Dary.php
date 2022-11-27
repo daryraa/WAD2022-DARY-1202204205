@@ -34,7 +34,6 @@ $showroom = query("SELECT * FROM showroom_dary_table WHERE id_mobil=$id")[0];
             </div>
         </div>
     </nav>
-    >
     <div class="row">
         <div class="col offset-md-1">
             <h1><?= $showroom["nama_mobil"]; ?></h1>
