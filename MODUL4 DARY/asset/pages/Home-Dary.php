@@ -1,6 +1,7 @@
 <?php
 session_start();
 require "../config/connector_user.php";
+require "../config/connector.php";
 
 $showroom1 = query1("SELECT * FROM user_dary");
 

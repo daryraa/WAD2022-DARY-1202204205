@@ -1,5 +1,5 @@
 <?php
-require "connector.php"; 
+require "connector_user.php"; 
     
 function tambah($data) {
     global $connector;
@@ -52,9 +52,5 @@ function upload(){
 
 
 }
-
-
-
-
 
 ?>

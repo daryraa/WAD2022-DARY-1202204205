@@ -1,5 +1,6 @@
 <?php
-include "../config/connector.php";
+require "../config/connector_user.php";
+require "../config/connector.php";
 require "../config/registrasi.php";
 
 if (isset($_POST["register"])) {

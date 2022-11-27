@@ -1,6 +1,7 @@
 <?php
 include "../config/insert.php";
 require "../config/connector_user.php";
+require "../config/connector.php";
 session_start();
 $showroom1 = query1("SELECT * FROM user_dary");
 if (!isset($_SESSION["login"])) {

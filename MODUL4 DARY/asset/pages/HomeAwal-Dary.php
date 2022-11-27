@@ -2,11 +2,8 @@
 session_start();
 session_destroy();
 require "../config/connector_user.php";
+require "../config/connector.php";
 
-// if (!isset($_SESSION["login"])){
-//   header("Location: Login-Dary.php");
-//   exit;
-// }
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,7 +1,5 @@
 <?php
-require "connector.php";
-
-
+require "connector_user.php";
 function ubah($data){
     global $connector;
 

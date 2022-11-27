@@ -1,6 +1,5 @@
 <?php 
 require "connector_user.php";
-
 function registrasi($data1){
     global $connector1;
     $email = $data1["email"];

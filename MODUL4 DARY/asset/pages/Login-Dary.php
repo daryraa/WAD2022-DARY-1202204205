@@ -1,5 +1,6 @@
 <?php
 require "../config/connector_user.php";
+require "../config/connector.php";
 session_start();
 
 if (isset($_COOKIE['id']) && isset($_COOKIE['email'])) {
@@ -37,8 +38,8 @@ if (isset($_POST["login"])) {
 
             //cek remember me
             if (isset($_POST['remember'])) {
-                setcookie('id', $test['id'], time() + 60);
-                setcookie('email', $test['email'], time() + 60);
+                setcookie('id', $test['id'], time() + 120);
+                setcookie('email', $test['email'], time() + 120);
             }
             header("Location: Home-Dary.php");
             exit;

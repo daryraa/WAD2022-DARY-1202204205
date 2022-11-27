@@ -1,5 +1,6 @@
 <?php
 require "../config/connector_user.php";
+require "../config/connector.php";
 require "../config/edit.php";
 
 

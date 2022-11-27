@@ -1,7 +1,7 @@
 <?php
-require "../config/connector.php";
 require "../config/edit.php";
 require "../config/connector_user.php";
+require "../config/connector.php";
 session_start();
 if (!isset($_SESSION["login"])) {
   header("Location: Login-Dary.php");
@@ -28,8 +28,6 @@ if (isset($_POST["submit"])) {
         </script>";
   }
 }
-
-
 ?>
 
 <!doctype html>
