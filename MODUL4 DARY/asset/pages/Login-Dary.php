@@ -21,7 +21,7 @@ if (isset($_SESSION["login"])) {
     exit;
 }
 if (isset($_POST["login"])) {
-    $email = $_POST["emai1"];
+    $email = $_POST["email"];
     $pass = $_POST["pass"];
 
     $result = mysqli_query($connector1, "SELECT * FROM user_dary WHERE user_dary.email = '$email'");
