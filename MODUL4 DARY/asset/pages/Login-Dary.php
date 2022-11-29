@@ -16,14 +16,12 @@ if (isset($_COOKIE['id']) && isset($_COOKIE['email'])) {
         $_SESSION['login'] = true;
     }
 }
-
-
 if (isset($_SESSION["login"])) {
     header("Location: Home-Dary.php");
     exit;
 }
 if (isset($_POST["login"])) {
-    $email = $_POST["email"];
+    $email = $_POST["emai1"];
     $pass = $_POST["pass"];
 
     $result = mysqli_query($connector1, "SELECT * FROM user_dary WHERE user_dary.email = '$email'");
@@ -34,8 +32,6 @@ if (isset($_POST["login"])) {
         if ($test["passwords"] === $pass) {
             //set session 
             $_SESSION["login"] = true;
-
-
             //cek remember me
             if (isset($_POST['remember'])) {
                 setcookie('id', $test['id'], time() + 120);

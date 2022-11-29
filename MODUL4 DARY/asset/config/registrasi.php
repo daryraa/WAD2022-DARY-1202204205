@@ -33,7 +33,7 @@ function registrasi($data1){
 
     $query1 = "INSERT INTO user_dary VALUES (NULL,'$nama','$email','$pass','$tel')";
 
-    mysqli_query($connector1, $query1);
+    mysqli_connect($connector1, $query1);
 
     return mysqli_affected_rows($connector1);
 }
