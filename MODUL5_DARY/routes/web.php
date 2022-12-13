@@ -38,7 +38,7 @@ Route::post('/login', [LoginController::class, 'authenticate'] );
 Route::get('/register', [RegisterController::class, 'index'] );
 Route::post('/register', [RegisterController::class, 'store'] );
 
-
+Route::get('/logout', [LoginController::class, 'logout'] );
 //view route
 Route::get('/mycar', [ShowroomsController::class, 'mycar']);
 Route::get('/mycar/add', [ShowroomsController::class, 'add']);
